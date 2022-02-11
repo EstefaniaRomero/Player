@@ -9,11 +9,12 @@ public class Main {
         List<Player> players = buildPlayersList();
         Player playerMaxPoints = getPlayerMaxPoints(players);
 
-        System.out.println(playerMaxPoints);
+        System.out.println("El Jugador con más puntos es: " + playerMaxPoints);
 
-        System.out.println(calculateAVGPoints(players));
+        System.out.println("La media de los puntos es: " + calculateAVGPoints(players));
         String team = "BOET";
-        double avg = calculateAvgPointsByTeam(players, team);
+
+        double avg = calculateAvgPointsByTeam(players,team);
 
         System.out.println("El avg de los puntos de los" +
                 " jugadores del equipo " + team + " es " + avg);
@@ -28,12 +29,12 @@ public class Main {
     private static List<Player> buildPlayersList() {
         List<Player> players = new ArrayList<>();
 
-        Player rocio = new Player("Rocío", 79, "ABPREMIA" + '\n');
-        Player xavi = new Player("Xavi", 46, "BOET" + '\n');
-        Player sergi = new Player("Sergi", 54, "BOET" + '\n');
-        Player olga = new Player("Olga", 93, "ABPREMIA" + '\n');
-        Player rosario = new Player("Rosario", 78, "BOET" + '\n');
-        Player gerard = new Player("Gerard", 99, "ABPREMIA" + '\n');
+        Player rocio = new Player("Rocío", 79, "ABPREMIA");
+        Player xavi = new Player("Xavi", 46, "BOET");
+        Player sergi = new Player("Sergi", 54, "BOET");
+        Player olga = new Player("Olga", 93, "ABPREMIA");
+        Player rosario = new Player("Rosario", 78, "BOET");
+        Player gerard = new Player("Gerard", 99, "ABPREMIA");
 
         players.add(rocio);
         players.add(xavi);
@@ -88,8 +89,7 @@ public class Main {
     }
 
 
-    private static double calculateAvgPointsByTeam
-            (List<Player> players, String team) {
+    private static double calculateAvgPointsByTeam (List<Player> players, String team) {
 
         //1. Creo un ArrayList auxiliar vacio
         List<Player> playersFromTeam = new ArrayList<>();

@@ -36,14 +36,7 @@ public class Player {
         this.numPoints = numPoints;
     }
 
-    @Override
-    public String toString() {
-        return "Player{" +
-                "name='" + name + '\'' +
-                ", numPoints=" + numPoints +
-                ", team='" + team + '\'' +
-                '}';
-    }
+
 
     @Override
     public boolean equals(Object o) {
@@ -53,4 +46,12 @@ public class Player {
         return Objects.equals(name, player.name);
     }
 
+    @Override
+    public String toString() {
+        return "Player{" +
+                "name='" + name + '\'' +
+                ", numPoints=" + numPoints +
+                ", team='" + team + '\'' +
+                "} \n";
+    }
 }
